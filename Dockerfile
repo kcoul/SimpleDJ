@@ -1,12 +1,18 @@
 # Build and run:
 #   docker build -t clion/ubuntu/cpp-env:1.0 -f Dockerfile .
+#   docker run --rm -it clion/ubuntu/cpp-env:1.0 /bin/sh
+#   docker run -rm -it -v $(pwd):/app clion/ubuntu/cpp-env:1.0
 
 # base image
 FROM ubuntu:20.04
 
+# docker defaults to /tmp, clion defaults to /tmp/misc so we avoid that future problem entirely
+WORKDIR /app
+
 #TODO define target-specific env variables
 
-#TODO bring back builder user and set as sudoer
+# set permissions
+RUN chmod 0755 -R /app
 
 # non interactive mode plays nice with CLion debug window
 RUN DEBIAN_FRONTEND="noninteractive" apt-get update && apt-get -y install tzdata
