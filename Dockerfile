@@ -6,7 +6,7 @@
 # * if you need an interactive docker shell run:
 # #   docker run --rm -it clion/ubuntu/cpp-env:1.0 /bin/sh
 # * and if you don't want to use clion, you can mount the volume using:
-# #   docker run -rm -it -v $(pwd):/app clion/ubuntu/cpp-env:1.0
+# #   docker run --rm -it -v $(pwd):/app clion/ubuntu/cpp-env:1.0
 
 # base image
 FROM ubuntu:20.04
