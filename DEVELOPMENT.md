@@ -9,8 +9,7 @@
     docker build -t clion/ubuntu/cpp-env:1.0 -f Dockerfile .
     ```
 3. Set up CLion:
-    - Navigate to Settings > Build, Execution, Deployment
-      > Toolchains
+    - Navigate to Settings > Build, Execution, Deployment > Toolchains
     - Select _+_ then choose _Docker_ from the dropdown
     - Click the gear icon on the right side of the server field
     - Select the docker image  from the dropdown field
