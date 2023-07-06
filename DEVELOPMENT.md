@@ -33,3 +33,16 @@
     folder in the container. However, if there are path mappings
     specified in the toolchain, CLion will use them instead.
 
+## Tips
+
+### Useful Docker Commands
+
+Interactive Docker shell for debugging:
+```shell
+docker run --rm -it clion/ubuntu/cpp-env:1.0 /bin/sh
+```
+
+manually mount the volume from project root:
+```shell
+docker run --rm -it -v $(pwd):/app clion/ubuntu/cpp-env:1.0
+```
